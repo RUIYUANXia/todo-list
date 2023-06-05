@@ -4,12 +4,42 @@
 <head>
     <title>Todo List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <!-- Import CSS stylesheet. -->
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <!-- Import JavaScript. -->
+    <div class=""app-container>
+        <div class="title-div">
+            <span class="title">
+                <a href="#">Todo List</a>
+            </span>
+            <span class="author">
+                <a href="https://github.com/RUIYUANXia">&nbsp; Ruiyuan Xia &nbsp;</a>
+            </span>
+        </div>
+
+
+        <div class="content-div">
+            <div class="create-item-div">
+                <input id="toggle-all-items-button" class="hide" type="checkbox" onclick="controller.toggleAllItems()">
+                <form id="create-item-form">
+                    <input id="create-item-input" type="text" placeholder="Add a new item" onkeyup="view.displayTodoItems()">
+                </form>
+                <button class="x-button" onclick="controller.clearForm()">x</button>
+            </div>
+            <button id="create-item-button" onclick="controller.createItem()" class="hide">+</button>
+    
+            <div class="item-list-div">
+                <br>
+                <ul></ul>
+            </div>
+    
+            <a id="delete-all-items-button" onclick="controller.deleteAllItems()">DELETE ALL</a>
+        </div>
+
+    </div>
+
+
     <script src="./script.js"></script>
 </body>
 
